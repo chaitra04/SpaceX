@@ -13,7 +13,7 @@ const app = express();
 app.get('/', (req, res) => {
     const app = ReactDOMServer.renderToString(<App />);
     console.log("app", app)
-    const indexFile = path.resolve('./build/index.html');
+    const indexFile = path.resolve('../build/index.html');
     fs.readFile(indexFile, 'utf8', (err, data) => {
       if (err) {
         console.error('Something went wrong:', err);
